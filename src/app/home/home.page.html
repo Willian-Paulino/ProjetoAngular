@@ -10,7 +10,7 @@
 <!-- Menu de Cursos -->
 <ion-row>
   <ion-col size="12">
-    <ion-segment value="default">
+    <ion-segment value="default" (ionChange)="selecionarCards($event)">
       <ion-segment-button value="desenvolvimento_sistemas">
       <ion-label>Desenvolvimento de Sistemas</ion-label>
       </ion-segment-button>
@@ -26,10 +26,11 @@
 
 
 <!-- Card de Desenvolvimento de Sistemas -->
+<ng-container *ngIf="this.item_selecionado == 'desenvolvimento_sistemas'">
 
-<ion-row>
-  
-  <ion-col size="4">
+  <ion-row>
+    
+    <ion-col size="4">
     <ion-card>
       <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
       <ion-card-header>
@@ -70,9 +71,10 @@
     </ion-card>
   </ion-col>
 </ion-row>
-
+</ng-container>
 <!-- Card de Informática para Internet -->
 
+<ng-container *ngIf="this.item_selecionado == 'informatica_internet'">
 <ion-row>
   
   <ion-col size="4">
@@ -116,9 +118,9 @@
     </ion-card>
   </ion-col>
 </ion-row>
-
+</ng-container>
 <!-- Card de Química -->
-
+<ng-container *ngIf="this.item_selecionado == 'quimica'">
 <ion-row>
   
   <ion-col size="4">
@@ -162,5 +164,5 @@
     </ion-card>
   </ion-col>
 </ion-row>
-
+</ng-container>
 </ion-content>
