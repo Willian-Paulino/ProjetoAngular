@@ -10,5 +10,22 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule,CommonModule],
 })
 export class HomePage {
-  constructor() {}
+  resultado : string = "";
+  num : string = "";
+  exibirCalculo(n : string){
+    this.num = this.resultado
+    this.resultado = this.num + n
+  }
+  reset(){
+    this.resultado = "";
+  }
+  del(){
+    this.num = this.resultado;
+    this.resultado = this.num.substring(0, this.num.length - 1);
+  }
+  Calcular(){
+    this.num = this.resultado;
+    this.num != "" ?  this.resultado = eval(this.num) : alert("Erro! Coloque valores na calculadora!");   
+    
+  }
 }
