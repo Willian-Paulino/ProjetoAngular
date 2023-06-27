@@ -6,7 +6,7 @@
       <!-- Area de exibição dos resultados -->
       <ion-row>
           <ion-col value="12">
-            <input type="result" class="calc__text" [readonly]="true" placeholder="{{this.resultado}}"> 
+            <input type="result" class="calc__text" [readonly]="true" placeholder="{{this.resultado}} {{this.infoporcentagem}}"> 
           </ion-col>
       </ion-row>
       <!-- Botões -->
@@ -16,7 +16,7 @@
           <ion-input type="button" class="calc__Botoes ion-text-center" value="C" (click)="reset()"></ion-input>
         </ion-col>
         <ion-col value="3">
-          <ion-input type="button" class="calc__Botoes" value="+/-"></ion-input>
+          <ion-input type="button" class="calc__Botoes" value="+/-" (click)="calcPosNeg()"></ion-input>
         </ion-col>
         <ion-col value="3">
           <ion-input type="button" class="calc__Botoes" value="DEL" (click)="del()"></ion-input>
@@ -72,7 +72,7 @@
           <ion-input type="button"class="calc__Botoes" value="0" (click)="exibirCalculo('0')"></ion-input>
         </ion-col>
         <ion-col value="3">
-          <ion-input type="button"class="calc__Botoes" value="%" (click)="exibirCalculo('%')"></ion-input>
+          <ion-input type="button"class="calc__Botoes" value="%" (click)="calcularPorcentagem()"></ion-input>
         </ion-col>
         <ion-col value="3">
           <ion-input type="button"class="calc__Botoes" value="." (click)="exibirCalculo('.')"></ion-input>
