@@ -2,83 +2,83 @@
 
 
   <ion-row class="ion-justify-content-center calc calc__Background">
-    <ion-col value="12" class="ion-text-center">
+    <ion-col size="12" class="ion-text-center">
       <!-- Area de exibição dos resultados -->
       <ion-row>
-          <ion-col value="12">
-            <input type="result" class="calc__text" [readonly]="true" placeholder="{{this.resultado}} {{this.infoporcentagem}}"> 
+          <ion-col size="12" size-sm="12">
+            <ion-textarea type="result" class="calc__text" [readonly]="true" placeholder="{{this.resultado}} {{this.infoporcentagem}}"></ion-textarea> 
           </ion-col>
       </ion-row>
       <!-- Botões -->
 
           <ion-row>
-            <ion-col value="3">
-          <ion-input type="button" class="calc__Botoes ion-text-center" value="C" (click)="reset()"></ion-input>
+            <ion-col size="3" size-sm="3">
+          <ion-input type="button" class="calc__Botoes-Chaves ion-text-center" value="C" (click)="reset()"></ion-input>
         </ion-col>
-        <ion-col value="3">
-          <ion-input type="button" class="calc__Botoes" value="+/-" (click)="calcPosNeg()"></ion-input>
+        <ion-col size="3" size-sm="3">
+          <ion-input type="button" class="calc__Botoes-Chaves" value="+/-" (click)="calcPosNeg()"></ion-input>
         </ion-col>
-        <ion-col value="3">
-          <ion-input type="button" class="calc__Botoes" value="DEL" (click)="del()"></ion-input>
+        <ion-col size="3" size-sm="3">
+          <ion-input type="button" class="calc__Botoes-Chaves ion-text-center" value="DEL" (click)="del()"></ion-input>
         </ion-col>
-        <ion-col value="3">
-          <ion-input type="button" class="calc__Botoes" value="/" (click)="exibirCalculo('/')"></ion-input>
+        <ion-col size="3" size-sm="3">
+          <ion-input type="button" class="calc__Botoes-Chaves" value="/" (click)="exibirCalculo('/')"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col value="3">
+        <ion-col size="3" size-sm="3">
           <ion-input type="button" class="calc__Botoes" value="7" (click)="exibirCalculo('7')"></ion-input>
         </ion-col>
-        <ion-col value="3">
+        <ion-col size="3" size-sm="3">
           <ion-input type="button" class="calc__Botoes" value="8" (click)="exibirCalculo('8')"></ion-input>
         </ion-col>
-        <ion-col value="3">
+        <ion-col size="3" size-sm="3">
           <ion-input type="button" class="calc__Botoes" value="9" (click)="exibirCalculo('9')"></ion-input>
         </ion-col>
-        <ion-col value="3">
-          <ion-input type="button" class="calc__Botoes" value="*" (click)="exibirCalculo('*')"></ion-input>
+        <ion-col size="3" size-sm="3">
+          <ion-input type="button" class="calc__Botoes-Chaves" value="*" (click)="exibirCalculo('*')"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col value="3">
+        <ion-col size="3" size-sm="3">
           <ion-input type="button" class="calc__Botoes" value="4" (click)="exibirCalculo('4')"></ion-input>
         </ion-col>
-        <ion-col value="3">
+        <ion-col size="3" size-sm="3">
           <ion-input type="button" class="calc__Botoes" value="5" (click)="exibirCalculo('5')"></ion-input>
         </ion-col> 
-        <ion-col value="3">
+        <ion-col size="3" size-sm="3">
           <ion-input type="button" class="calc__Botoes" value="6" (click)="exibirCalculo('6')"></ion-input>
         </ion-col>
-        <ion-col value="3">
-          <ion-input type="button"class="calc__Botoes" value="-" (click)="exibirCalculo('-')"></ion-input>
+        <ion-col size="3" size-sm="3">
+          <ion-input type="button"class="calc__Botoes-Chaves" value="-" (click)="exibirCalculo('-')"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col value="3">
+        <ion-col size="3" size-sm="3">
           <ion-input type="button" class="calc__Botoes"value="1" (click)="exibirCalculo('1')"></ion-input>
         </ion-col>
-        <ion-col value="3">
+        <ion-col size="3" size-sm="3">
           <ion-input type="button" class="calc__Botoes"value="2" (click)="exibirCalculo('2')"></ion-input>
         </ion-col>
-        <ion-col value="3">
+        <ion-col size="3" size-sm="3">
           <ion-input type="button" class="calc__Botoes"value="3" (click)="exibirCalculo('3')"></ion-input>
         </ion-col>
-        <ion-col value="3">
-          <ion-input type="button"class="calc__Botoes" value="+" (click)="exibirCalculo('+')"></ion-input>
+        <ion-col size="3" size-sm="3">
+          <ion-input type="button"class="calc__Botoes-Chaves" value="+" (click)="exibirCalculo('+')"></ion-input>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col value="3">
+        <ion-col size="3" size-sm="3">
           <ion-input type="button"class="calc__Botoes" value="0" (click)="exibirCalculo('0')"></ion-input>
         </ion-col>
-        <ion-col value="3">
-          <ion-input type="button"class="calc__Botoes" value="%" (click)="calcularPorcentagem()"></ion-input>
+        <ion-col size="3" size-sm="3">
+          <ion-input type="button"class="calc__Botoes-Chaves" value="%" (click)="calcularPorcentagem()"></ion-input>
         </ion-col>
-        <ion-col value="3">
-          <ion-input type="button"class="calc__Botoes" value="." (click)="exibirCalculo('.')"></ion-input>
+        <ion-col size="3" size-sm="3">
+          <ion-input type="button"class="calc__Botoes-Chaves" value="." (click)="exibirCalculo('.')"></ion-input>
         </ion-col>
-        <ion-col value="3">
-          <ion-input type="button"class="calc__Botoes" value="=" (click)="Calcular()"></ion-input>
+        <ion-col size="3" size-sm="3">
+          <ion-input type="button"class="calc__Botoes-Chaves" value="=" (click)="Calcular()"></ion-input>
         </ion-col>
       </ion-row>
 

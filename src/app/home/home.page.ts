@@ -14,6 +14,7 @@ export class HomePage {
   resultado : string = "";
   num : string = "";
   num2 : string = "";
+  num3 : string = "";
   opcaoporcentagem : Boolean = false;
   infoporcentagem : string = "";
 
@@ -42,7 +43,8 @@ export class HomePage {
     //verificação para ver se o usuário vai desejar ou não ver a porcentagem de um numero
       if(this.opcaoporcentagem){
         this.num = this.resultado;
-        this.resultado = eval("this.num2 * this.num / 100");
+        this.num3 = eval(this.num);
+        this.resultado = eval("this.num2 * this.num3 / 100");
         this.opcaoporcentagem = false;
       } else{
         this.num = this.resultado;        
@@ -52,16 +54,16 @@ export class HomePage {
 
   //função usada para recuperar o numero que o usuario deseja ver a porcentagem
   calcularPorcentagem(){
-    this.num2 = this.resultado;
+    this.num2 = eval(this.resultado);
     this.infoporcentagem = "Coloque a porcentagem";
     this.resultado = "";
     this.opcaoporcentagem = true;
   }
 
-  //função usada para colocar o primeiro numero que o usuário digitar como negativo
+  //função usada para colocar a conta inteira como um numero negativo ou positivo. (Para evitar possiveis Bugs).
   calcPosNeg(){
-    this.num = eval("this.resultado * -1");
-    this.resultado = this.num;
+    this.num = eval(this.resultado);
+    this.resultado = eval("this.num * -1");
   }
 
 }
